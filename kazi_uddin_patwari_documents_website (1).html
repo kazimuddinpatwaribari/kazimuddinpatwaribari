@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>কাজিম উদ্দীন পাটোয়ারী বাড়ি — হেদায়েত উল্যা গং নথি</title>
+<style>
+:root{--green:#0f5132;--green2:#167c4c;--bg:#f4f7f5;--text:#1d2b24;--card:#fff;--line:#dce5df}
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,"Noto Sans Bengali",sans-serif;background:var(--bg);color:var(--text)}
+.top{background:#062d1c;color:#fff;padding:10px 5%;font-size:14px;display:flex;justify-content:space-between;gap:12px}
+header{background:#fff;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:2}
+.brand{font-weight:800;font-size:22px;color:var(--green)} .brand small{display:block;color:#617168;font-size:12px;margin-top:3px}
+nav{display:flex;gap:16px;flex-wrap:wrap} nav a{color:#294238;text-decoration:none;font-size:15px}
+.hero{padding:55px 5%;background:linear-gradient(110deg,#e5f2ea,#c8e4d2);display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}
+.hero h1{font-size:clamp(30px,5vw,52px);line-height:1.25;margin:0 0 15px}.hero p{font-size:17px;max-width:680px;color:#40544a}
+.btn{border:0;background:var(--green);color:#fff;padding:13px 18px;border-radius:9px;font-weight:700;cursor:pointer;font-size:15px}.btn.alt{background:#fff;color:var(--green);border:1px solid var(--green)}
+.hero-card{background:#fff;border-radius:20px;padding:25px;box-shadow:0 12px 35px #0b4d2a22}
+.container{max-width:1250px;margin:auto;padding:35px 5%}.section-title{text-align:center;font-size:27px;margin:5px 0 25px}
+.stats,.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:var(--card);padding:22px;border:1px solid var(--line);border-radius:14px;box-shadow:0 4px 14px #00000008}.num{font-size:30px;font-weight:800;color:var(--green)}
+.form{background:#fff;padding:25px;border-radius:16px;border:1px solid var(--line);display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #cdd9d1;border-radius:8px;font:inherit}textarea{min-height:80px}.full{grid-column:1/-1}
+.search{display:flex;gap:10px;margin-bottom:18px}.search input{flex:1}
+.docs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.doc h3{margin:0 0 8px}.meta{font-size:13px;color:#607268;margin:4px 0}.doc-actions{display:flex;gap:8px;margin-top:15px}.danger{background:#b42318}.empty{grid-column:1/-1;text-align:center;color:#667}
+footer{background:#062d1c;color:#d9e8df;padding:25px 5%;text-align:center;margin-top:30px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.stats,.categories{grid-template-columns:repeat(2,1fr)}.docs{grid-template-columns:1fr}.form{grid-template-columns:1fr}.top{font-size:12px}.brand{font-size:17px}nav{display:none}}
+</style>
+</head>
+<body>
+<div class="top"><span>🔒 নিরাপদ নথি সংরক্ষণ ব্যবস্থা</span><span id="today"></span></div>
+<header>
+  <div class="brand">🏠 কাজিম উদ্দীন পাটোয়ারী বাড়ি <small>হেদায়েত উল্যা গং নথি</small></div>
+  <nav><a href="#home">হোম</a><a href="#upload">নথি আপলোড</a><a href="#documents">নথিসমূহ</a></nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <div style="color:var(--green);font-weight:700">স্বাগতম</div>
+    <h1>আপনার গুরুত্বপূর্ণ জমির নথি এক জায়গায়</h1>
+    <p>দলিল, খতিয়ান, জমির নকশা ও অন্যান্য গুরুত্বপূর্ণ কাগজপত্র সহজে সংরক্ষণ, খোঁজা এবং দেখা যাবে।</p>
+    <button class="btn" onclick="document.querySelector('#upload').scrollIntoView({behavior:'smooth'})">নথি আপলোড করুন</button>
+    <button class="btn alt" onclick="document.querySelector('#documents').scrollIntoView({behavior:'smooth'})">নথি দেখুন</button>
+  </div>
+  <div class="hero-card">
+    <h2 style="margin-top:0">📁 নথি ব্যবস্থাপনা</h2>
+    <p>✔ দলিল ও খতিয়ান সংরক্ষণ</p><p>✔ দাগ ও খতিয়ান নম্বর দিয়ে অনুসন্ধান</p><p>✔ ছবি ও PDF সংযুক্তি</p><p>✔ মোবাইল থেকেও ব্যবহারযোগ্য</p>
+  </div>
+</section>
+
+<main class="container">
+  <section class="stats">
+    <div class="card"><div>মোট দলিল</div><div class="num" id="deedCount">0</div></div>
+    <div class="card"><div>মোট খতিয়ান</div><div class="num" id="khatianCount">0</div></div>
+    <div class="card"><div>জমির নকশা</div><div class="num" id="mapCount">0</div></div>
+    <div class="card"><div>অন্যান্য নথি</div><div class="num" id="otherCount">0</div></div>
+  </section>
+
+  <section id="upload" style="margin-top:45px">
+    <h2 class="section-title">📤 নতুন নথি সংরক্ষণ</h2>
+    <form class="form" id="docForm">
+      <div><label>নথির ধরন</label><select id="type"><option>দলিল</option><option>খতিয়ান</option><option>জমির নকশা</option><option>অন্যান্য</option></select></div>
+      <div><label>নথির শিরোনাম</label><input id="title" required placeholder="যেমন: ১২৩৪ নং দলিল"></div>
+      <div><label>দলিল/খতিয়ান নম্বর</label><input id="number" placeholder="নম্বর লিখুন"></div>
+      <div><label>দাগ নম্বর</label><input id="dag" placeholder="দাগ নম্বর"></div>
+      <div><label>মৌজার নাম</label><input id="mouza" placeholder="মৌজার নাম"></div>
+      <div><label>তারিখ</label><input id="date" type="date"></div>
+      <div class="full"><label>নোট</label><textarea id="note" placeholder="প্রয়োজনীয় তথ্য লিখুন"></textarea></div>
+      <div class="full"><label>ছবি বা PDF</label><input id="file" type="file" accept="image/*,.pdf"></div>
+      <div class="full"><button class="btn" type="submit">নথি সংরক্ষণ করুন</button></div>
+    </form>
+    <p style="font-size:13px;color:#8a4b00">⚠️ এই সংস্করণটি ডেমো হিসেবে আপনার ব্রাউজারের Local Storage ব্যবহার করে। আসল ব্যক্তিগত দলিল সংরক্ষণের আগে নিরাপদ সার্ভার, লগইন, এনক্রিপশন ও ব্যাকআপ যুক্ত করা প্রয়োজন।</p>
+  </section>
+
+  <section id="documents" style="margin-top:45px">
+    <h2 class="section-title">📄 সংরক্ষিত নথিসমূহ</h2>
+    <div class="search"><input id="search" placeholder="দলিল নম্বর, খতিয়ান, দাগ বা মৌজার নাম দিয়ে খুঁজুন..."><button class="btn" onclick="render()">সার্চ</button></div>
+    <div class="docs" id="docs"></div>
+  </section>
+</main>
+<footer>© ২০২৬ কাজিম উদ্দীন পাটোয়ারী বাড়ি — হেদায়েত উল্যা গং নথি<br>আপনার গুরুত্বপূর্ণ নথি সুশৃঙ্খলভাবে সংরক্ষণের জন্য</footer>
+
+<script>
+const KEY='hedayet_ullya_documents_v1';
+let docs=JSON.parse(localStorage.getItem(KEY)||'[]');
+document.getElementById('today').textContent=new Date().toLocaleDateString('bn-BD',{year:'numeric',month:'long',day:'numeric'});
+
+document.getElementById('docForm').addEventListener('submit', async e=>{
+  e.preventDefault();
+  const f=document.getElementById('file').files[0];
+  let attachment=null;
+  if(f){
+    if(f.size>2*1024*1024){alert('ডেমো সংস্করণে সর্বোচ্চ ২ MB ফাইল ব্যবহার করুন।');return;}
+    attachment=await new Promise(resolve=>{const r=new FileReader();r.onload=()=>resolve({name:f.name,type:f.type,data:r.result});r.readAsDataURL(f)});
+  }
+  docs.unshift({id:Date.now(),type:type.value,title:title.value,number:number.value,dag:dag.value,mouza:mouza.value,date:date.value,note:note.value,attachment});
+  localStorage.setItem(KEY,JSON.stringify(docs)); e.target.reset(); render(); alert('নথি সংরক্ষণ করা হয়েছে।');
+});
+
+function del(id){if(confirm('এই নথিটি মুছে ফেলতে চান?')){docs=docs.filter(x=>x.id!==id);localStorage.setItem(KEY,JSON.stringify(docs));render();}}
+function esc(s){return String(s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function render(){
+  const q=document.getElementById('search').value.toLowerCase().trim();
+  const filtered=docs.filter(d=>JSON.stringify(d).toLowerCase().includes(q));
+  document.getElementById('docs').innerHTML=filtered.length?filtered.map(d=>`
+    <article class="card doc"><div style="font-size:25px">📄</div><h3>${esc(d.title)}</h3>
+    <div class="meta">ধরন: ${esc(d.type)}</div>
+    <div class="meta">নম্বর: ${esc(d.number)||'—'}</div>
+    <div class="meta">দাগ: ${esc(d.dag)||'—'} | মৌজা: ${esc(d.mouza)||'—'}</div>
+    ${d.note?`<p>${esc(d.note)}</p>`:''}
+    <div class="doc-actions">${d.attachment?`<button class="btn alt" onclick="openFile(${d.id})">ফাইল দেখুন</button>`:''}<button class="btn danger" onclick="del(${d.id})">মুছুন</button></div>
+  </article>`).join(''):'<div class="empty card">এখনো কোনো নথি পাওয়া যায়নি।</div>';
+  const count=t=>docs.filter(d=>d.type===t).length;
+  deedCount.textContent=count('দলিল'); khatianCount.textContent=count('খতিয়ান'); mapCount.textContent=count('জমির নকশা'); otherCount.textContent=count('অন্যান্য');
+}
+function openFile(id){const d=docs.find(x=>x.id===id); if(d?.attachment) window.open(d.attachment.data,'_blank');}
+render();
+</script>
+</body>
+</html>
